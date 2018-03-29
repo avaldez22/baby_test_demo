@@ -6,13 +6,13 @@ from baby_set import BabySet
 class TestBabySetMethods(unittest.TestCase):
 
     def test_init(self):
-        bset = BabySet()
-        self.assertEqual(bset.size(), 0)
-
-    def test_init_empty(self):
-        bset = BabySet([2, 4, 6])
+         bset = BabySet([2, 4, 6])
         self.assertEqual(bset.size(), 3)
 
+    def test_init_empty(self):
+       bset = BabySet()
+        self.assertEqual(bset.size(), 0)
+	
     def test_add(self):
         bset = BabySet([2, 4, 4])
         bset.add(4)
@@ -35,7 +35,7 @@ class TestBabySetMethods(unittest.TestCase):
 
     def test_clear(self):
         bset = BabySet([2, 4, 6])
-	bset.clear()
+	self.assertEqual(bset.size(), 0)
 	print(bset)
 
 if __name__ == '__main__':
